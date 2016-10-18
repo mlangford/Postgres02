@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.txtAccId = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtNewOvr = new System.Windows.Forms.TextBox();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.rbHome = new System.Windows.Forms.RadioButton();
             this.rbWork = new System.Windows.Forms.RadioButton();
+            this.lbAccounts = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // label1
@@ -48,15 +48,6 @@
             this.label1.Size = new System.Drawing.Size(127, 29);
             this.label1.TabIndex = 4;
             this.label1.Text = "Account ID";
-            // 
-            // txtAccId
-            // 
-            this.txtAccId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAccId.Location = new System.Drawing.Point(430, 60);
-            this.txtAccId.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtAccId.Name = "txtAccId";
-            this.txtAccId.Size = new System.Drawing.Size(143, 30);
-            this.txtAccId.TabIndex = 5;
             // 
             // label2
             // 
@@ -126,22 +117,34 @@
             this.rbWork.Text = "Connect to BoG on ces-web3";
             this.rbWork.UseVisualStyleBackColor = true;
             // 
+            // lbAccounts
+            // 
+            this.lbAccounts.FormattingEnabled = true;
+            this.lbAccounts.ItemHeight = 16;
+            this.lbAccounts.Location = new System.Drawing.Point(430, 61);
+            this.lbAccounts.Name = "lbAccounts";
+            this.lbAccounts.Size = new System.Drawing.Size(143, 52);
+            this.lbAccounts.TabIndex = 15;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(625, 326);
+            this.Controls.Add(this.lbAccounts);
             this.Controls.Add(this.rbWork);
             this.Controls.Add(this.rbHome);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.txtNewOvr);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtAccId);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -150,13 +153,13 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtAccId;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtNewOvr;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.RadioButton rbHome;
         private System.Windows.Forms.RadioButton rbWork;
+        private System.Windows.Forms.ListBox lbAccounts;
     }
 }
 
