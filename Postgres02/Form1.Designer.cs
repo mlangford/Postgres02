@@ -34,13 +34,15 @@
             this.txtNewOvr = new System.Windows.Forms.TextBox();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
+            this.rbHome = new System.Windows.Forms.RadioButton();
+            this.rbWork = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(207, 47);
+            this.label1.Location = new System.Drawing.Point(280, 61);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(127, 29);
@@ -50,7 +52,7 @@
             // txtAccId
             // 
             this.txtAccId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAccId.Location = new System.Drawing.Point(357, 46);
+            this.txtAccId.Location = new System.Drawing.Point(430, 60);
             this.txtAccId.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtAccId.Name = "txtAccId";
             this.txtAccId.Size = new System.Drawing.Size(143, 30);
@@ -60,7 +62,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(109, 126);
+            this.label2.Location = new System.Drawing.Point(182, 140);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(225, 29);
@@ -70,7 +72,7 @@
             // txtNewOvr
             // 
             this.txtNewOvr.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNewOvr.Location = new System.Drawing.Point(357, 125);
+            this.txtNewOvr.Location = new System.Drawing.Point(430, 139);
             this.txtNewOvr.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNewOvr.Name = "txtNewOvr";
             this.txtNewOvr.Size = new System.Drawing.Size(143, 30);
@@ -79,13 +81,14 @@
             // btnUpdate
             // 
             this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdate.Location = new System.Drawing.Point(357, 193);
+            this.btnUpdate.Location = new System.Drawing.Point(430, 207);
             this.btnUpdate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(143, 47);
             this.btnUpdate.TabIndex = 8;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // label3
             // 
@@ -99,11 +102,37 @@
             this.label3.Text = "~ status ~";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // rbHome
+            // 
+            this.rbHome.AutoSize = true;
+            this.rbHome.Checked = true;
+            this.rbHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbHome.Location = new System.Drawing.Point(12, 11);
+            this.rbHome.Name = "rbHome";
+            this.rbHome.Size = new System.Drawing.Size(245, 24);
+            this.rbHome.TabIndex = 12;
+            this.rbHome.TabStop = true;
+            this.rbHome.Text = "Connect to BoG on localhost";
+            this.rbHome.UseVisualStyleBackColor = true;
+            // 
+            // rbWork
+            // 
+            this.rbWork.AutoSize = true;
+            this.rbWork.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbWork.Location = new System.Drawing.Point(12, 41);
+            this.rbWork.Name = "rbWork";
+            this.rbWork.Size = new System.Drawing.Size(250, 24);
+            this.rbWork.TabIndex = 13;
+            this.rbWork.Text = "Connect to BoG on ces-web3";
+            this.rbWork.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(625, 326);
+            this.Controls.Add(this.rbWork);
+            this.Controls.Add(this.rbHome);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.txtNewOvr);
@@ -126,6 +155,8 @@
         private System.Windows.Forms.TextBox txtNewOvr;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.RadioButton rbHome;
+        private System.Windows.Forms.RadioButton rbWork;
     }
 }
 
